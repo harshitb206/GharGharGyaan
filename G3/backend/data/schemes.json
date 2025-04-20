@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Maternity Benefits",
+    "criteria": ["pregnant", "aadhar"],
+    "benefits": "₹6000 under Pradhan Mantri Matru Vandana Yojana, 26 weeks paid leave"
+  },
+  {
+    "name": "Widow Pension",
+    "criteria": ["widow"],
+    "benefits": "Monthly ₹1000 pension"
+  },
+  {
+    "name": "Disability Pension",
+    "criteria": ["disabled"],
+    "benefits": "Monthly ₹1000 pension"
+  },
+  {
+    "name": "Legal Aid",
+    "criteria": ["low_income"],
+    "benefits": "Free legal assistance under NALSA"
+  }
+]
