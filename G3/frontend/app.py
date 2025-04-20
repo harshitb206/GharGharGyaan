@@ -44,7 +44,7 @@ def voice_reply():
     return str(response)
 
 def run_flask():
-    flask_app.run(port=5001)
+    flask_app.run(port=5000)
 
 threading.Thread(target=run_flask, daemon=True).start()
 
@@ -339,7 +339,7 @@ if option == "Eligibility Checker":
 # 2. Know Your Rights
 elif option == "Know Your Rights":
     st.header("2. Know Your Rights")
-    category = st.selectbox("Select category", ["Maternity", "Domestic Violence", "Immunization", "Pension", "Legal Aid","Schoolarships"])
+    category = st.selectbox("Select category", ["maternity", "domestic violence", "immunization", "pension", "legal aid","scholarships"])
     if st.button("Get Info"):
         res = requests.get(f"{API_URL}/rights/{category}").json()
         st.text(res["info"])
@@ -384,7 +384,7 @@ elif option == "Call Feature":
         phone_number = "+919915386338"  # Your phone number for the call (you can make this dynamic if needed)
 
         try:
-            response = requests.post("http://localhost:5001/call", data={"To": phone_number})
+            response = requests.post("http://localhost:5000/call", data={"To": phone_number})
             st.success(f"Call initiated! {response.text}")
         except Exception as e:
             st.error(f"Error initiating the call: {e}")
