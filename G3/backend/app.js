@@ -18,5 +18,5 @@ app.use('/api/rights', rightsRoutes);
 app.use('/api/stories', storiesRoutes);
 app.use('/api/documents', documentRoutes);
 
-const PORT = 5001;
+const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
