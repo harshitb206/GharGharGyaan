@@ -13,11 +13,12 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import time
 
-# ---------------------- Twilio Setup ----------------------
-# These should be defined in Streamlit secrets
-TWILIO_ACCOUNT_SID = "ACdf84b135b29e84b7d8864cf63e2ecd95"
-TWILIO_AUTH_TOKEN = "8bf3e7a33964a279358c0d5e7c39390f"
-TWILIO_PHONE_NUMBER = "+15392810268"
+//twilio is secret
+[twilio]
+account_sid = "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+auth_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+phone_number = "+1xxxxxxxxxx"
+
 
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
@@ -381,7 +382,7 @@ elif option == "Call Feature":
     st.header("6. Contact Us ")
 
     if st.button("Click to Call"):
-        phone_number = "+919915386338"  # Your phone number for the call (you can make this dynamic if needed)
+        phone_number = "+91*********"  # Your phone number for the call (you can make this dynamic if needed)
 
         try:
             response = requests.post("http://localhost:5000/call", data={"To": phone_number})
