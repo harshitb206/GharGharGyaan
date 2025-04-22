@@ -162,7 +162,7 @@ option = st.sidebar.radio(
 
 # 5. Student Scholarships
 if option == "Student Scholarships":
-    st.markdown("<h2 style='color:#004D40;text-align:center;'>🎓 Student Scholarships (Garib Bacchon ke liye)</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='color:#004D40;text-align:center;'>🎓 Student Scholarships</h2>", unsafe_allow_html=True)
     st.markdown("<p style='color:#00796B;'>Please answer the following to find scholarships you may be eligible for:</p>", unsafe_allow_html=True)
 
     # 🧾 Identity & Income
@@ -395,35 +395,35 @@ elif option == "Student Scholarships":
     st.write("Answer a few questions to check for available scholarships:")
 
     # Simple scholarship eligibility inputs
-    student = st.checkbox("Are you currently a school or college student?", key="is_student")
-    low_income = st.checkbox("Is your family income below ₹2 lakh per year?", key="student_low_income")
-    orphan = st.checkbox("Are you an orphan or without parental support?", key="student_orphan")
-    rural_area = st.checkbox("Do you reside in a rural/backward area?", key="rural_area")
-    minority = st.checkbox("Do you belong to a minority community (SC/ST/OBC/Muslim/Christian)?", key="minority")
+    is_student_scholarship = st.checkbox("📚 Are you currently a school or college student?", key="iss_student_scholarship")
+    low_income_scholarship = st.checkbox("💸 Is your family income below ₹2 lakh/year?", key="student_low_income_scholarship")
+    orphan_scholarship = st.checkbox("🧒 Are you an orphan or without parental support?", key="student_orphan_scholarship")
+    rural_area_scholarship = st.checkbox("Do you reside in a rural/backward area?", key="rural_area_scholarship")
+    minority_scholarship = st.checkbox("Do you belong to a minority community (SC/ST/OBC/Muslim/Christian)?", key="minority_scholarship ")
 
     if st.button("Show Scholarships"):
         # Sample hardcoded scholarships — in production, fetch from an API or DB
         scholarships = []
 
-        if student and low_income:
+        if is_student_scholarship and low_income_scholarship:
             scholarships.append({
                 "name": "NSP Pre-Matric Scholarship",
                 "benefits": "Up to ₹10,000 per year for school students from low-income families"
             })
 
-        if student and low_income and minority:
+        if is_student_scholarship and low_income_scholarship and minority_scholarship:
             scholarships.append({
                 "name": "Minority Scholarship Scheme",
                 "benefits": "₹5,000 to ₹25,000 per year for students from minority communities"
             })
 
-        if student and rural_area:
+        if is_student_scholarship and rural_area_scholarship:
             scholarships.append({
                 "name": "PM YASASVI Scholarship",
                 "benefits": "Scholarship for OBC/EBC/DNT students studying in Class 9 to 12"
             })
 
-        if student and orphan:
+        if is_student_scholarship and orphan_scholarship:
             scholarships.append({
                 "name": "State Government Foster Child Education Scheme",
                 "benefits": "Free education and monthly stipend for orphan students"
